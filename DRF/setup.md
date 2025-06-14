@@ -37,14 +37,14 @@ MIDDLEWARE = [
 ```
 
 ### 4. Configure Allowed Origins
-	To allow specific domains 
+To allow specific domains 
 ```
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
 ]
 ```
-	Or to allow **all origins** (not recommended in production):
+Or to allow **all origins** (not recommended in production):
 ```
 	CORS_ALLOW_ALL_ORIGINS = True
 
@@ -55,3 +55,4 @@ CORS_ALLOWED_ORIGINS = [
 python manage.py runserver
 
 ```
+Continue to [[Custom User Authentication]] 

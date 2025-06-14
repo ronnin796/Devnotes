@@ -1,5 +1,5 @@
-
-
+first must have completed the setup [[setup]]
+#flashcards 
 ## Steps
 
 ---
@@ -16,7 +16,7 @@ class CustomUser(AbstractUser):
 
 name = models.CharField(max_length=255, null=True , default='Annonymous')
 
-email = models.EmailField(unique=True, max_length=255, null=True)
+cemail = models.EmailField(unique=True, max_length=255, null=True)
 
 username = None # Disable username field
 USERNAME_FIELD = 'email' # Use email as the unique identifier
