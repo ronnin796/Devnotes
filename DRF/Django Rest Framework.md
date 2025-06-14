@@ -11,9 +11,10 @@ When building a Django REST API that interacts with a frontend (like React), you
 
 ### 1. Install Required Packages
 
-```bash
+```
 pip install djangorestframework
-pip install django-cors-headers   ```
+pip install django-cors-headers   
+```
 
 ### 2.  Add to `INSTALLED_APPS` in `settings.py
 ```
