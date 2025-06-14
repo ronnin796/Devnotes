@@ -4,12 +4,12 @@
 
 ---
 ### 1.Create a model Based on the existing model
-	Import the abstractuser class
+Import the abstractuser class
 ```
 from django.contrib.auth.models import AbstractUser
 
 ```
-	Make a CustomUser model my Importing the abstractuser
+Make a CustomUser model my Importing the abstractuser
 	
 ```
 class CustomUser(AbstractUser):
