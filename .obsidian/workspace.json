@@ -11,10 +11,14 @@
             "id": "bc6f4ab5704337ff",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "ML/Hidden Markov Model.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Hidden Markov Model"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ML/Hidden Markov Model.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Hidden Markov Model"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "ML/Hidden Markov Model.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Hidden Markov Model"
             }
           },
           {
@@ -175,8 +181,9 @@
   },
   "active": "bc6f4ab5704337ff",
   "lastOpenFiles": [
-    "DRF/Custom User Authentication.md",
     "ML/Clustering.md",
+    "ML/Hidden Markov Model.md",
+    "DRF/Custom User Authentication.md",
     "DRF/setup.md",
     "ML/Tensorflow/Building a model.md",
     "ML/Tensorflow",
