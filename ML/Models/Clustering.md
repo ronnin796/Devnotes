@@ -1,4 +1,4 @@
-#flashcards #review #MLmodels
+#flashcards #review #MLmodels #unsupervised 
 ## what is clustering?
 - Unsupervised Learning
 - Grouping of Data points

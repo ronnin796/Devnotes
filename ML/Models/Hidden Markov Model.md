@@ -1,4 +1,4 @@
-#MLmodels #ML
+#MLmodels #ML #unsupervised
 ## What is HMM?
 - Is a finite set of states
 - each associated with a probability distribution
