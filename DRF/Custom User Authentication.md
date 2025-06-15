@@ -96,7 +96,9 @@ extra_kwargs = {
 
 fields = ('name' , 'email', 'phone' , 'gender' , 'is_active', 'is_staff', 'is_superuser' , 'password', 'session_token', 'created_at', 'updated_at')
 ```
+
 🔐 `create(self, validated_data)`
+
 Handles **custom creation logic**, especially to hash the password.
 ```
 password = validated_data.pop('password', None)
@@ -107,11 +109,14 @@ instance.save()
 return instance
 
 ```
+
 - Extracts and **removes** `password` from validated data.
 - Creates a user instance without the password.
 - Uses `set_password()` to **hash** the password before saving.
 - Saves and returns the instance.
+
 🔄 `update(self, instance, validated_data)`
+
 Handles updating the user, including password hashing:
 ```
 for attr, value in validated_data.items():
@@ -123,10 +128,13 @@ instance.save()
 return instance
 
 ```
+
 - Iterates over all fields being updated.
 - If the field is `password`, it’s hashed.
 - Other fields are updated normally.
+
 🛠️ `Meta` class
+
 ```
 class Meta:
     model = CustomeUser
@@ -137,6 +145,7 @@ class Meta:
 
 
 ```
+
 - Specifies the model this serializer is for (`CustomeUser`).
 - `fields`: All the fields you want included in the API input/output.
 - `extra_kwargs`: Makes `password` write-only (not readable through the API).
