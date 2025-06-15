@@ -1,3 +1,5 @@
+#flashcards #review 
+## what is clustering?
 - Unsupervised Learning
 - Grouping of Data points
 - Same group have same features and vice versa

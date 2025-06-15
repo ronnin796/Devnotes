@@ -1,5 +1,5 @@
 first must have completed the setup [[setup]]
-#flashcards 
+#flashcards #review
 ## Steps
 
 ---
