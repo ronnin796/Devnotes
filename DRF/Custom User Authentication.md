@@ -193,63 +193,63 @@ import re
 
 def signin(request):
 
-if not request.method == 'POST':
+	if not request.method == 'POST':
 
-return JsonResponse({'error': 'Send a post request with valid parameters'})
+		return JsonResponse({'error': 'Send a post request with valid parameters'})
 
-username = request.POST['email']
+	username = request.POST['email']
 
-password = request.POST['password']
-
-  
-
-if not re.match(r"^[\w\.-]+@[\w\.-]+\.\w+$", username):
-
-return JsonResponse({'error': 'Invalid email format'})
-
-if len(password) < 8:
-
-return JsonResponse({'error': 'Password must be at least 8 characters long'})
-
-UserModel = get_user_model()
-
-try:
-
-user = UserModel.objects.get(email = username)
-
-if user.check_password(password):
-
-usr_dict = UserModel.objects.filter(email=username).values().first()
-
-usr_dict.pop('password')
+	password = request.POST['password']
 
   
 
-if user.session_token != "0":
+	if not re.match(r"^[\w\.-]+@[\w\.-]+\.\w+$", username):
 
-user.session_token = "0"
+		return JsonResponse({'error': 'Invalid email format'})
 
-user.save()
+	if len(password) < 8:
 
-return JsonResponse({'error': 'User already logged in'})
+		return JsonResponse({'error': 'Password must be at least 8 characters long'})
 
-token = generate_session_token()
+	UserModel = get_user_model()
 
-user.session_token = token
+	try:
 
-user.save()
+	user = UserModel.objects.get(email = username)
 
-login(request, user)
+	if user.check_password(password):
 
-return JsonResponse({'token': token, 'user': usr_dict})
+		usr_dict = UserModel.objects.filter(email=username).values().first()
 
-else:
+		usr_dict.pop('password')
 
-return JsonResponse({'error': 'Invalid Password '})
+  
 
-except UserModel.DoesNotExist:
+		if user.session_token != "0":
 
-return JsonResponse({'error': 'User does not exist'})
+			user.session_token = "0"
+
+			user.save()
+
+			return JsonResponse({'error': 'User already logged in'})
+
+		token = generate_session_token()
+
+		user.session_token = token
+
+		user.save()
+
+		login(request, user)
+
+		return JsonResponse({'token': token, 'user': usr_dict})
+
+	else:
+
+		return JsonResponse({'error': 'Invalid Password '})
+
+	except UserModel.DoesNotExist:
+
+		return JsonResponse({'error': 'User does not exist'})
 ```
 
 🧩 Explanation (with Highlights)
