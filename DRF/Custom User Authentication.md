@@ -215,37 +215,37 @@ def signin(request):
 
 	try:
 
-	user = UserModel.objects.get(email = username)
+		user = UserModel.objects.get(email = username)
 
-	if user.check_password(password):
+		if user.check_password(password):
 
-		usr_dict = UserModel.objects.filter(email=username).values().first()
+			usr_dict = UserModel.objects.filter(email=username).values().first()
 
-		usr_dict.pop('password')
+			usr_dict.pop('password')
 
   
 
-		if user.session_token != "0":
+			if user.session_token != "0":
 
-			user.session_token = "0"
+				user.session_token = "0"
+
+				user.save()
+
+				return JsonResponse({'error': 'User already logged in'})
+
+			token = generate_session_token()
+
+			user.session_token = token
 
 			user.save()
 
-			return JsonResponse({'error': 'User already logged in'})
+			login(request, user)
 
-		token = generate_session_token()
+			return JsonResponse({'token': token, 'user': usr_dict})
 
-		user.session_token = token
+		else:
 
-		user.save()
-
-		login(request, user)
-
-		return JsonResponse({'token': token, 'user': usr_dict})
-
-	else:
-
-		return JsonResponse({'error': 'Invalid Password '})
+			return JsonResponse({'error': 'Invalid Password '})
 
 	except UserModel.DoesNotExist:
 
