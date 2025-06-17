@@ -107,8 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "d10003196389ff53",
@@ -191,7 +190,8 @@
               "title": "Notes Review Queue"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -211,12 +211,12 @@
   },
   "active": "b964bdb12066a7b6",
   "lastOpenFiles": [
-    "DRF/UserSerializer Explained.md",
     "DRF/setup.md",
     "DRF/Custom User Authentication.md",
     "ML/Models/Classification.md",
-    "ML/Models/Regression.md",
     "ML/Models/Hidden Markov Model.md",
+    "ML/Models/Regression.md",
+    "DRF/UserSerializer Explained.md",
     "ML/Models/Clustering.md",
     "ML/Concepts",
     "ML/Tensorflow/Building a model.md",
