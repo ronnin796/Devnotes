@@ -375,3 +375,138 @@ username = request.POST.get('email', '')
 
 ```
 
+## 5. Permission Template 
+🧱 Full Code
+```
+from rest_framework import viewsets
+from rest_framework.permissions import AllowAny
+from .models import CustomUser
+from .serializers import UserSerializer
+
+class UserViewSet(viewsets.ModelViewSet):
+    permission_classes_by_action = {
+        'create': [AllowAny]
+    }
+
+    queryset = CustomUser.objects.all().order_by('id')
+    serializer_class = UserSerializer
+
+    def get_permissions(self):
+        try:
+            return [permission() for permission in self.permission_classes_by_action[self.action]]
+        except KeyError:
+            return [permission() for permission in self.permission_classes]
+```
+
+🔍 Key Components
+🔹 `permission_classes_by_action`
+
+```
+permission_classes_by_action = {
+    'create': [AllowAny]
+}
+
+```
+
+- This dictionary defines **per-action permissions**.
+- In this case, `create` (sign-up) is **open to unauthenticated users** using `AllowAny`.
+
+🔹 `get_permissions()`
+
+```
+def get_permissions(self):
+    try:
+        return [permission() for permission in self.permission_classes_by_action[self.action]]
+    except KeyError:
+        return [permission() for permission in self.permission_classes]
+
+```
+- Dynamically returns the permission classes **based on the action** (e.g., `create`, `update`, `retrieve`).
+- Falls back to the default `permission_classes` (defined in the view or inherited from settings) if the action isn’t listed.
+
+🧠 Why This is Useful
+- Helps you **expose signup (POST)** to public users.
+- Still protects `list`, `update`, `retrieve`, `destroy`, etc. behind **authentication**.
+- Clean and reusable way to manage **per-action permissions** in DRF.
+
+
+## 6.User Signout
+
+```
+from django.contrib.auth import logout, get_user_model
+from django.http import JsonResponse
+
+def signout(request, id):
+    logout(request)
+    UserModel = get_user_model()
+
+    try:
+        user = UserModel.objects.get(pk=id)
+        user.session_token = "0"
+        user.save()
+    except UserModel.DoesNotExist:
+        return JsonResponse({'error': 'User does not exist'})
+
+    return JsonResponse({'message': 'User logged out successfully'})
+```
+
+🧠 Notes
+
+- `logout(request)`: Ends the current Django session
+- `session_token = "0"`: Custom token invalidation (often used in mobile apps or custom auth systems)
+- Uses `get_user_model()` to ensure it works with a custom user model
+
+## 7. Urls for user
+
+📜 Code
+
+```
+from django.contrib import admin
+from django.urls import path, include
+from rest_framework import routers
+from .views import UserViewSet, signin, signout
+
+# DRF router to auto-generate CRUD URLs
+router = routers.DefaultRouter()
+router.register(r'', UserViewSet, basename='user')
+
+urlpatterns = [
+    path('login/', signin, name='signin'),   
+    path('logout/<int:id>/', signout, name='signout'),
+    path('', include(router.urls)),
+]
+
+```
+
+🔍 Breakdown
+
+🔹 `DefaultRouter` and `UserViewSet`
+
+```
+router = routers.DefaultRouter()
+router.register(r'', UserViewSet, basename='user')
+
+```
+
+- Registers the `UserViewSet` with the base route (`''`)
+- Generates endpoints like:
+    - `GET /` → List users
+    - `POST /` → Create user
+    - `GET /<id>/` → Retrieve user
+    - `PUT /<id>/` → Update user
+    - `DELETE /<id>/` → Delete user
+
+> ⚠️ Registering with `''` means the ViewSet is mounted at the **root** of this URLconf.
+
+🔹 Custom Login / Logout Endpoints
+
+```
+path('login/', signin, name='signin')
+path('logout/<int:id>/', signout, name='signout')
+
+
+```
+
+- Handles login logic (token auth or custom session)
+- Custom logout endpoint (e.g., clears token or session)
+- Accepts `user_id` as a parameter
