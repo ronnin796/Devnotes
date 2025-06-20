@@ -510,3 +510,47 @@ path('logout/<int:id>/', signout, name='signout')
 - Handles login logic (token auth or custom session)
 - Custom logout endpoint (e.g., clears token or session)
 - Accepts `user_id` as a parameter
+
+## 8. Super User problem in Custom User
+First Delete the Db
+create 0001_initial.py (api/migrations)
+
+```
+from django.db import migrations
+
+from api.users.models import CustomUser
+
+  
+
+class Migration(migrations.Migration):
+
+	def seed_data(apps, schema_editor):
+
+		user = CustomUser(name="kygiet" ,
+
+		email="kygiet@gmail.com",
+
+		is_staff=True,
+
+		is_superuser=True,
+
+		phone="9746894500",
+
+		gender = "Male")
+
+		user.set_password("2746")
+
+		user.save()
+
+  
+
+	dependencies = []
+
+  
+
+	operations = [
+
+	migrations.RunPython(seed_data)
+
+	]
+```
