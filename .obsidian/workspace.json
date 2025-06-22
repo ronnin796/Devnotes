@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DRF/Custom User Authentication.md",
+                "file": "ML/ML Process.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Custom User Authentication"
+              "title": "ML Process"
             }
           }
         ],
@@ -212,8 +212,10 @@
   "active": "b964bdb12066a7b6",
   "lastOpenFiles": [
     "ML/Concepts/Model Evaluation.md",
-    "ML/Concepts/SUPERVISED LEARNING vs UNSUPERVISED LEARNING VS REINFORCEMENT LEARNING.md",
+    "ML/ML Process.md",
+    "ML/ML Process",
     "DRF/Custom User Authentication.md",
+    "ML/Concepts/SUPERVISED LEARNING vs UNSUPERVISED LEARNING VS REINFORCEMENT LEARNING.md",
     "DRF/setup.md",
     "ML/Models/Classification.md",
     "ML/Models/Hidden Markov Model.md",
@@ -232,7 +234,6 @@
     "Django-Auth/Untitled 1.md",
     "Welcome.md",
     "DRF/Untitled",
-    "Django-Auth",
-    "Ubuntu"
+    "Django-Auth"
   ]
 }

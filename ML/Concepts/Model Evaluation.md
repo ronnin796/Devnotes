@@ -1,4 +1,4 @@
-#ML #ModelEvaluation
+#ML #ModelEvaluation #accuracy #precision #recall #F1score
 # 📊 Model Evaluation Metrics
 
 Use these metrics to evaluate how well a classification model is performing.
