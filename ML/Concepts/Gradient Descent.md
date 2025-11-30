@@ -1,0 +1,2 @@
+- curse of dimensionality
+- need stochastic GD to fix local minimun Cost

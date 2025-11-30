@@ -4,53 +4,99 @@
     "type": "split",
     "children": [
       {
-        "id": "319201a0f04200d0",
+        "id": "e9e7efb37eb42a05",
         "type": "tabs",
         "children": [
           {
-            "id": "bc6f4ab5704337ff",
+            "id": "555037fcb74cd896",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Models/Regression.md",
+                "file": "Docker/DockerFile Build.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Regression"
+              "title": "DockerFile Build"
             }
           },
           {
-            "id": "6127be72ea14f143",
+            "id": "140c33ccb8f4c682",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DRF/Custom User Authentication.md",
+                "file": "Ubuntu/wifi/symlink.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Custom User Authentication"
+              "title": "symlink"
             }
           },
           {
-            "id": "b964bdb12066a7b6",
+            "id": "be36bab9a6330098",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "ML/ML Process.md",
-                "mode": "source",
-                "source": false
+                "file": "PICS/Pasted image 20251123161009.png"
               },
-              "icon": "lucide-file",
-              "title": "ML Process"
+              "icon": "lucide-image",
+              "title": "Pasted image 20251123161009"
+            }
+          },
+          {
+            "id": "ac13cb2436bf31f5",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "PICS/Pasted image 20251123160831.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20251123160831"
+            }
+          },
+          {
+            "id": "cff37f507f2771bc",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "PICS/Pasted image 20251123160803.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20251123160803"
+            }
+          },
+          {
+            "id": "c59169998a0d9730",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "PICS/Pasted image 20251121175642.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20251121175642"
+            }
+          },
+          {
+            "id": "02026293a2ee3157",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Pasted image 20251124233632.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20251124233632"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -200,6 +246,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -209,31 +256,54 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "b964bdb12066a7b6",
+  "active": "291e2a2a25a63ee8",
   "lastOpenFiles": [
-    "ML/Concepts/Model Evaluation.md",
-    "ML/ML Process.md",
-    "ML/ML Process",
-    "DRF/Custom User Authentication.md",
-    "ML/Concepts/SUPERVISED LEARNING vs UNSUPERVISED LEARNING VS REINFORCEMENT LEARNING.md",
-    "DRF/setup.md",
-    "ML/Models/Classification.md",
+    "VBOX/KVM issue.md",
+    "Course Progress/linux.md",
+    "Course Progress/DSA with python.md",
+    "Miniforge.md",
+    "ML/Process oF Training/Training and Test Set.md",
     "ML/Models/Hidden Markov Model.md",
-    "ML/Models/Regression.md",
-    "DRF/UserSerializer Explained.md",
-    "ML/Models/Clustering.md",
-    "ML/Concepts",
-    "ML/Tensorflow/Building a model.md",
-    "ML/Models",
-    "Untitled",
-    "ML/Tensorflow",
-    "ML",
-    "README.md",
-    "DRF",
-    "Untitled 1",
-    "Django-Auth/Untitled 1.md",
-    "Welcome.md",
-    "DRF/Untitled",
-    "Django-Auth"
+    "ML/Dimensionality Reduction/PCA/Principal Component Analysis.md",
+    "ML/Dimensionality Reduction/PCA/ALgorithm of PCA.md",
+    "ML/Dimensionality Reduction/LDA/LINEAR DISCRIMINANT ANALYSIS.md",
+    "PICS/Pasted image 20251123161350.png",
+    "PICS/Pasted image 20251123161009.png",
+    "Pasted image 20251124233632.png",
+    "Pasted image 20251124234000.png",
+    "Pasted image 20251124234455.png",
+    "Pasted image 20251124234548.png",
+    "ML/DL/Boltzman machines/Deep Belief Network.md",
+    "Ubuntu/recent historu.md",
+    "Ubuntu/wifi/check connections.md",
+    "Ubuntu/wifi/symlink.md",
+    "Mathematics/LA/2 Linear Combinations , span and basis vectors.md",
+    "Mathematics/LA",
+    "Mathematics",
+    "PICS/Pasted image 20251114194519.png",
+    "PICS/Pasted image 20251121175642.png",
+    "PICS/Pasted image 20251123160803.png",
+    "PICS/Pasted image 20251123160831.png",
+    "links.md",
+    "Course Progress",
+    "Course Progresses.md",
+    "Docker/DockerFile Build.md",
+    "VBOX",
+    "Docker/Docker Starting Old containers.md",
+    "Docker/Docker Containers.md",
+    "Docker/Basic commands.md",
+    "ML/DL/Boltzman machines/Contrast Divergence.md",
+    "ML/DL/Boltzman machines/Restricted Boltzman Machines.md",
+    "ML/DL/Boltzman machines/Energy Based Models.md",
+    "ML/DL/Boltzman machines/BMs.md",
+    "ML/DL/RNN/LSTM.md",
+    "ML/DL/Boltzman machines",
+    "ML/DL/RNN/The Vanishing Gradient.md",
+    "ML/DL/RNN",
+    "ML/Datapreprocessing",
+    "Docker",
+    "PICS",
+    "ML/DL/ANN",
+    "Untitled.canvas"
   ]
 }

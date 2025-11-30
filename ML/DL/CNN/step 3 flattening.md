@@ -1,0 +1,2 @@
+- ![[Pasted image 20251101195015.png]]
+- Think of flattening like taking a **page of pixels** and **lining them up into a single row** so a neural network can “read” them in order.

@@ -1,0 +1,6 @@
+- Intro to CNN by jianxin wu
+- cs.nju.edu.cn/wujx/paper/CNN.pdf
+- ![[Pasted image 20251030170017.png]]
+- size reduced by feature detector ; preserving important features
+- ![[Pasted image 20251030170506.png]] ![[Pasted image 20251030170904.png]]
+- ![[Pasted image 20251030170959.png]]
